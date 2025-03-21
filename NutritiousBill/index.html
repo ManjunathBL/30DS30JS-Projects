@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Final Bill Generator</h2>
+
+    <div>
+        <label for="food">Select Food Item:</label>
+        <select id="food">
+            <option value="Tender Coconut Fritters" data-price="120" data-cal="200" data-protein="5" data-carbs="20" data-fat="10">Tender Coconut Fritters - ₹120</option>
+            <option value="Dahi Bhalla Papdi Chaat" data-price="100" data-cal="180" data-protein="6" data-carbs="25" data-fat="8">Dahi Bhalla Papdi Chaat - ₹100</option>
+            <option value="Paneer Hyderabadi Gravy" data-price="150" data-cal="250" data-protein="10" data-carbs="15" data-fat="15">Paneer Hyderabadi Gravy - ₹150</option>
+            <option value="Mirchi Lasoon Paratha" data-price="80" data-cal="220" data-protein="7" data-carbs="30" data-fat="10">Mirchi Lasoon Paratha - ₹80</option>
+            <option value="Onion Ajwain Paratha" data-price="90" data-cal="240" data-protein="7" data-carbs="31" data-fat="12">Onion Ajwain Paratha - ₹90</option>
+        </select>
+        <button onclick="addItem()">Add Item</button>
+    </div>
+
+    <h3>Ordered Items</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price (₹)</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="orderList"></tbody>
+    </table>
+
+    <h3>Total</h3>
+    <p id="totalAmount">Total Amount: ₹0</p>
+    <p id="totalCalories">Total Calories: 0 kcal</p>
+    <p id="totalProtein">Protein: 0g</p>
+    <p id="totalCarbs">Carbs: 0g</p>
+    <p id="totalFat">Fat: 0g</p>
+
+    <button onclick="printBill()">Print Bill</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
