@@ -1,0 +1,361 @@
+/* Reset default browser styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's width and height calculations */
+    font-family: 'Arial', sans-serif; /* Set default font for all elements */
+}
+
+/* Main background styling with romantic red color */
+body {
+    background-color: #ff3a5e; /* Romantic red background color */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Make body at least the height of the viewport */
+    overflow: hidden; /* Hide scrollbars and content that overflows */
+    position: relative; /* Enable positioning context for absolute elements */
+    padding: 1rem; /* Add padding around the edges on all devices */
+}
+
+/* Main content container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px; /* Rounded corners */
+    padding: clamp(1rem, 5vw, 2.5rem); /* Responsive padding that scales with viewport */
+    width: 100%; /* Use 100% of available width within padding */
+    max-width: 600px; /* But don't exceed 600px */
+    text-align: center; /* Center text content */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    position: relative; /* Enable positioning context */
+    z-index: 10; /* Ensure container appears above background elements */
+}
+
+/* Main heading styling */
+h1 {
+    color: #ff3a5e; /* Match heading color to background for consistency */
+    margin-bottom: clamp(1rem, 3vw, 1.5rem); /* Responsive margin */
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
+    word-wrap: break-word; /* Prevent overflow on small screens */
+}
+
+/* Paragraph text styling */
+p {
+    color: #333; /* Dark gray for readability */
+    margin-bottom: clamp(1rem, 4vw, 2rem); /* Responsive margin */
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    line-height: 1.6; /* Increased line height for readability */
+}
+
+/* Button container for alignment and spacing */
+.btn-container {
+    display: flex; /* Use flexbox for button layout */
+    justify-content: center; /* Center buttons horizontally */
+    gap: clamp(0.8rem, 3vw, 1.5rem); /* Responsive spacing between buttons */
+    margin-bottom: clamp(1rem, 4vw, 2rem); /* Responsive margin */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+/* Base button styling shared by all buttons */
+.btn {
+    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.2rem, 4vw, 2rem); /* Responsive padding */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded button edges */
+    font-size: clamp(0.9rem, 2vw, 1.2rem); /* Responsive font size */
+    cursor: pointer; /* Show pointer on hover */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    touch-action: manipulation; /* Better touch behavior on mobile */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Specific styling for the "Yes" button */
+.btn-yes {
+    background-color: #ff3a5e; /* Match app theme */
+    color: white; /* White text for contrast */
+}
+
+/* Hover effect for "Yes" button - only apply on devices that support hover */
+@media (hover: hover) {
+    .btn-yes:hover {
+        background-color: #e62e50; /* Slightly darker on hover */
+        transform: scale(1.05); /* Grow slightly on hover */
+    }
+}
+
+/* Active state for touch devices */
+.btn-yes:active {
+    background-color: #e62e50; /* Slightly darker on press */
+    transform: scale(0.98); /* Slight press effect */
+}
+
+/* Specific styling for the "No" button */
+.btn-no {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #666; /* Darker gray text */
+}
+
+/* Styling for the response text area */
+#response {
+    font-size: clamp(1.1rem, 3vw, 1.5rem); /* Responsive font size */
+    font-weight: bold; /* Bold for emphasis */
+    color: #ff3a5e; /* Match theme color */
+    margin-top: clamp(1rem, 3vw, 1.5rem); /* Responsive margin */
+    min-height: 50px; /* Minimum height to prevent layout shift */
+}
+/* Improved styling for the date details section */
+.date-details {
+    background-color: #fff1f3; /* Very light pink background */
+    border-radius: 15px; /* Rounded corners */
+    padding: clamp(1rem, 3vw, 1.5rem); /* Responsive padding */
+    margin-top: clamp(1.5rem, 4vw, 2rem); /* Responsive margin */
+    display: none; /* Hidden initially */
+    animation: fadeIn 1s; /* Fade in animation when displayed */
+    width: 100%; /* Ensure full width within container */
+}
+
+/* Styling for form elements container */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Enhanced select dropdown styling for cross-platform consistency */
+#date-select {
+    padding: clamp(0.5rem, 2vw, 0.8rem); 
+    margin: 1rem 0 1.5rem;
+    width: 100%; 
+    max-width: 280px;
+    border-radius: 8px; 
+    border: 1px solid #ddd;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+    -webkit-appearance: none; /* Remove default styling on iOS */
+    appearance: none; /* Standard */
+    background-color: white;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 30px; /* Space for the arrow */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Focus state for the select dropdown */
+#date-select:focus {
+    border-color: #ff3a5e;
+    box-shadow: 0 0 0 3px rgba(255, 58, 94, 0.2);
+}
+
+/* Improved styling for the confirmation button */
+#confirm-btn {
+    background-color: #ff3a5e; /* Match theme color */
+    color: white; /* White text for contrast */
+    padding: clamp(0.7rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2.5rem); /* Responsive padding */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded button edges */
+    font-size: clamp(0.9rem, 2vw, 1.2rem); /* Responsive font size */
+    cursor: pointer; /* Show pointer on hover */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    touch-action: manipulation; /* Better touch behavior on mobile */
+    display: inline-block;
+    min-width: 160px; /* Minimum width for button */
+    max-width: 100%; /* Don't overflow container */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for depth */
+    margin-top: 0.5rem; /* Space above button */
+}
+
+/* Hover effect for confirmation button - only apply on devices that support hover */
+@media (hover: hover) {
+    #confirm-btn:hover {
+        background-color: #e62e50; /* Slightly darker on hover */
+        transform: scale(1.05); /* Grow slightly on hover */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+    }
+}
+
+/* Active state for touch devices */
+#confirm-btn:active {
+    background-color: #e62e50; /* Slightly darker on press */
+    transform: scale(0.98); /* Slight press effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Reduced shadow on press */
+}
+
+/* Small screen specific adjustments */
+@media (max-width: 480px) {
+    #date-select {
+        width: 90%; /* Slightly smaller on very small screens */
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+}
+
+/* Fixed height issues for select element in Safari */
+@supports (-webkit-touch-callout: none) {
+    #date-select {
+        height: 44px; /* Fixed height for iOS */
+    }
+}
+
+/* Fix for Firefox select appearance */
+@-moz-document url-prefix() {
+    #date-select {
+        background-image: none; /* Remove custom arrow in Firefox */
+        padding-right: 0.8rem; /* Reduce right padding */
+    }
+}
+
+/* Heart animations section - adjust size based on screen */
+.heart {
+    position: absolute; /* Position hearts anywhere in the viewport */
+    width: clamp(15px, 3vw, 30px); /* Responsive heart width */
+    height: clamp(15px, 3vw, 30px); /* Responsive heart height */
+    background-color: #ff3a5e; /* Heart color */
+    transform: rotate(45deg); /* Rotate to create heart shape base */
+    animation: heartFloat 15s linear infinite; /* Apply floating animation */
+    opacity: 0.6; /* Semi-transparent */
+}
+
+/* Create the top-left curve of the heart using pseudo-element */
+.heart::before, .heart::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position relative to parent heart */
+    width: 100%; /* Same size as heart */
+    height: 100%; /* Same size as heart */
+    background-color: #ff3a5e; /* Same color as heart */
+    border-radius: 50%; /* Make circular for rounded edges */
+}
+
+/* Position the top lobe of the heart */
+.heart::before {
+    top: -50%; /* Position to create top curve - relative to size */
+    left: 0; /* Align with parent */
+}
+
+/* Position the left lobe of the heart */
+.heart::after {
+    top: 0; /* Align with parent */
+    left: -50%; /* Position to create left curve - relative to size */
+}
+
+/* Animation for the floating hearts */
+@keyframes heartFloat {
+    0% {
+        transform: rotate(45deg) translateY(0) scale(0.8); /* Start position and size */
+        opacity: 0; /* Start transparent */
+    }
+    10% {
+        opacity: 0.6; /* Fade in quickly */
+    }
+    100% {
+        transform: rotate(45deg) translateY(-100vh) scale(1); /* Float upward and grow slightly */
+        opacity: 0; /* Fade out at the end */
+    }
+}
+
+/* Animation for fading in elements */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Start fully transparent */
+    to { opacity: 1; } /* End fully visible */
+}
+
+/* Celebration container for confetti effect */
+.celebration {
+    position: fixed; /* Fixed position covering viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    pointer-events: none; /* Allow clicking through */
+    z-index: 0; /* Behind content */
+    display: none; /* Hidden initially */
+}
+
+/* Individual confetti pieces - size based on screen size */
+.confetti {
+    position: absolute; /* Position anywhere in the celebration container */
+    width: clamp(5px, 1.5vw, 10px); /* Responsive width */
+    height: clamp(5px, 1.5vw, 10px); /* Responsive height */
+    background-color: #ff3a5e; /* Color matching theme */
+    opacity: 0.8; /* Slight transparency */
+    animation: confettiFall 5s linear infinite; /* Apply falling animation */
+}
+
+/* Animation for falling confetti */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-10px) rotate(0deg); /* Start position and rotation */
+        opacity: 1; /* Start fully visible */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Fall down and spin */
+        opacity: 0; /* Fade out at the end */
+    }
+}
+
+/* Small screen specific adjustments */
+@media (max-width: 480px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons on very small screens */
+        gap: 0.8rem; /* Smaller gap */
+    }
+    
+    .btn {
+        width: 100%; /* Full width buttons */
+        max-width: 250px; /* But not too wide */
+        margin: 0 auto; /* Center */
+    }
+}
+
+/* Medium screen adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+    .btn {
+        min-width: 120px; /* Ensure buttons have minimum width */
+    }
+}
+
+/* Fix for older iOS Safari issues with vh units */
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Fix for orientation change on mobile devices */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    body {
+        min-height: 500px; /* Ensure minimum height in landscape on mobile */
+    }
+    
+    .container {
+        margin: 1rem 0; /* Add margin to prevent touching screen edges */
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    .btn-yes, #confirm-btn {
+        background-color: #e01030; /* Darker red for better contrast */
+    }
+    
+    p, .date-details p {
+        color: #000; /* Black text for maximum contrast */
+    }
+}
+
+/* Reduce animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .heart, .confetti {
+        animation-duration: 0s; /* Disable animations */
+    }
+    
+    .btn:hover, #confirm-btn:hover {
+        transform: none; /* No transform animations */
+    }
+    
+    .date-details {
+        animation: none; /* No fade in animation */
+    }
+}

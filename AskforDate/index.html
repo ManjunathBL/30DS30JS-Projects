@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Her on a Date</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Go on a Date with Me?</h1>
+        <p>I've been thinking about you a lot lately, and I'd love to spend some quality time together. Would you like to go on a date with me?</p>
+        
+        <div class="btn-container">
+            <button class="btn btn-yes" id="yes-btn">Yes, I'd love to!</button>
+            <button class="btn btn-no" id="no-btn">No, thanks</button>
+        </div>
+        
+        <div id="response"></div>
+        
+        <div class="date-details" id="date-details">
+            <h2>Perfect! Let's make it special</h2>
+            <p>How about dinner at that new restaurant you mentioned, followed by a walk under the stars?</p>
+            <div class="form-group">
+                <p>Please select when you're available:</p>
+                <select id="date-select" class="form-select">
+                    <option value="">Choose a day</option>
+                    <option value="friday">This Friday</option>
+                    <option value="saturday">This Saturday</option>
+                    <option value="sunday">This Sunday</option>
+                    <option value="nextweek">Next weekend</option>
+                </select>
+                <button id="confirm-btn">Confirm our date!</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="celebration" id="celebration"></div>
+    
+    <script src="./script.js">
+        
+    </script>
+</body>
+</html>
