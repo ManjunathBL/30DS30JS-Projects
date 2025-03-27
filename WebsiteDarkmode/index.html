@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and responsive meta tag for proper rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title displayed in browser tab -->
+    <title>My Portfolio</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <!-- Note: Changed to style.css to match your file naming -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <nav>
+            <!-- Logo or name section -->
+            <div class="logo">Manjunath</div>
+            
+            <!-- Navigation menu with links to different sections -->
+            <ul>
+                <!-- Each list item is an anchor link to a specific page section -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content container -->
+    <main>
+        <!-- Home/Hero section - first thing visitors see -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <!-- Large heading introducing yourself -->
+                <h1>Hello, I'm <span class="name-highlight">Manjunath</span></h1>
+                
+                <!-- Subtitle describing your professional identity -->
+                <p>Web Developer | Designer | Creative Thinker</p>
+                
+                <!-- Button to toggle dark/light mode (functionality in JS) -->
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </section>
+
+        <!-- About Me section providing personal and professional background -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- Profile image - using placeholder for demonstration -->
+                <img src="./150431883.jpg" alt="Your Profile" class="profile-img">
+                
+                <div class="about-text">
+                    <!-- Personal description paragraph -->
+                    <p>A passionate web developer with a love for creating intuitive and beautiful digital experiences. I specialize in front-end development and enjoy bringing creative ideas to life through code.</p>
+                    
+                    <!-- Skills list -->
+                    <div class="skills">
+                        <h3>Skills</h3>
+                       <div>
+                        <ul>
+                            <!-- Technical skills you possess -->
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>React.js</li>
+                        </ul>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section to showcase your work -->
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            
+            <!-- Grid layout for project cards -->
+            <div class="project-grid">
+                <!-- Each project card represents a different project -->
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A brief description of your first project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>A brief description of your second project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>A brief description of your third project.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section with form for visitor interaction -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            
+            <!-- Contact form for potential employers or clients -->
+            <form id="contact-form">
+                <!-- Input fields with required attribute for validation -->
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message  </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section with copyright and social links -->
+    <footer>
+        <!-- Social media links -->
+        <div class="social-links">
+            <!-- Replace # with actual social media profile links -->
+            <a href="#" class="social-icon">GitHub</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+            <a href="#" class="social-icon">Twitter</a>
+        </div>
+        
+        <!-- Copyright notice -->
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
