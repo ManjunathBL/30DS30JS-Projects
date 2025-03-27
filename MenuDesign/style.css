@@ -1,0 +1,62 @@
+*{
+    margin: 0; /* Reset default margin for all elements */
+    padding: 0; /* Reset default padding for all elements */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a default font for the entire page */
+}
+
+.hero{
+    width: 100%; /* The hero section takes up the full width of the viewport */
+    height: 100vh; /* The hero section takes up the full height of the viewport */
+    background-image: linear-gradient(#57a9c9,#730228); /* Apply a gradient background from light blue to dark red */
+    display: flex; /* Use flexbox for layout control within the hero section */
+    align-items: center; /* Vertically center the content within the hero section */
+    justify-content: center; /* Horizontally center the content within the hero section */
+}
+.selector{
+    width: 350px; /* Set a fixed width for the dropdown selector container */
+}
+#selectfield{
+    width: 100%; /* The select field takes up the full width of its container */
+    padding: 15px 20px; /* Add padding inside the select field for visual spacing */
+    margin-bottom: 30px; /* Add margin below the select field to separate it from the dropdown list */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: rgba(255, 255, 255, 0.7); /* Apply a semi-transparent white background to the select field */
+    border-radius: 6px; /* Round the corners of the select field */
+    display: flex; /* Use flexbox for layout control within the select field */
+    align-items: center; /* Vertically center the content within the select field */
+    justify-content: space-between; /* Distribute space between the text and the arrow icon */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the select field, indicating it's interactive */
+}
+#selectfield img{
+   width: 12px; /* Set the width of the dropdown arrow image */
+}
+
+#list{
+    width: 100%; /* The dropdown list takes up the full width of its container */
+    background: rgba(255, 255, 255, 0.7); /* Apply a semi-transparent white background to the dropdown list */
+    border-radius: 6px; /* Round the corners of the dropdown list */
+    overflow: hidden; /* Hide any overflowing content, such as when the list is initially hidden */
+    transition: visibility 0.3s ease; /* Add a smooth transition effect when the visibility of the list changes */
+}
+.options{
+    width: 100%; /* Each option in the list takes up the full width of the list */
+    padding: 15px; /* Add padding inside each option for visual spacing */
+    list-style: none; /* Remove the default list style (bullets or numbers) */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over an option, indicating it's clickable */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative; /* Position the option relative to allow absolute positioning of the icon */
+    display: flex; /* added */
+    align-items: center; /* added */
+}
+.options img {
+    width: 25px;
+    margin-right: 10px; /* Added margin-right to the image */
+}
+.options:hover{
+    background: rgba(223, 214, 214, 0.7); /* Apply a slightly darker semi-transparent background on hover for visual feedback */
+}
+.hide{
+    visibility: hidden; /* Hide the dropdown list */
+    max-height: 0; /* Set max-height to 0 so the transition works, the element collapses */
+    padding: 0; /* Remove padding when hidden */
+}
